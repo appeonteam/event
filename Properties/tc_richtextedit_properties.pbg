@@ -1,0 +1,25 @@
+Save Format v3.0(19990112)
+@begin Libraries
+ "Properties\\tc_richtextedit_properties.pbl" "";
+@end;
+@begin Objects
+ "Properties\\tc_richtextedit_properties.sra" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\d_testinfo.srd" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\m_templet.srm" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_templet.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\m_simplecasemain.srm" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_simplecasemain.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_rteprow01.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_rteprow02.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_rteprow03.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_rteprow04.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\n_cst_config.sru" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_rteprow05.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_rteprow06.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_rteprow07.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\nvo_runwindow_parameter.sru" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\uo_multilineedit.sru" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\nvo_transaction.sru" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\w_pop_viewscript.srw" "Properties\\tc_richtextedit_properties.pbl";
+ "Properties\\d_testpoint_templet.srd" "Properties\\tc_richtextedit_properties.pbl";
+@end;

@@ -1,0 +1,68 @@
+﻿$PBExportHeader$d_testinfo.srd
+release 8;
+datawindow(units=0 timer_interval=0 color=134217739 processing=0 print.documentname=""  print.orientation=0 print.margin.left=110 print.margin.right=110 print.margin.top=96 print.margin.bottom=96 print.paper.size=0 print.paper.source=0 selected.mouse=no)
+header(height=0 )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=616 color="536870912" )
+table(column=(type=long key=yes identity=yes update=yes updatewhereclause=yes name=testinfoid dbname="TestInfo.TestInfoId"  )
+column=(type=long update=yes updatewhereclause=yes name=testpointid dbname="TestInfo.TestPointId"  )
+column=(type=long update=yes updatewhereclause=yes name=reviewman dbname="TestInfo.ReviewMan" 
+ values=""  )
+column=(type=datetime update=yes updatewhereclause=yes name=reviewtime dbname="TestInfo.ReviewTime"  )
+column=(type=long update=yes updatewhereclause=yes name=versionid dbname="TestInfo.versionid" 
+ values=""  )
+column=(type=char(1) update=yes updatewhereclause=yes name=infotype dbname="TestInfo.infotype" 
+ values=""  )
+column=(type=char(1) update=yes updatewhereclause=yes name=reviewstate dbname="TestInfo.ReviewState"  )
+column=(type=char(1) update=yes updatewhereclause=yes name=is_copy dbname="TestInfo.Is_Copy" 
+ values="Copy:	T/Copy:	F"  )
+column=(type=long update=yes updatewhereclause=yes name=categoryid dbname="TestInfo.CategoryId" 
+ values=""  )
+column=(type=long update=yes updatewhereclause=yes name=refnumber dbname="TestInfo.RefNumber"  )
+column=(type=long update=yes updatewhereclause=yes name=windowid dbname="TestInfo.WindowId"  )
+column=(type=char(1) update=yes updatewhereclause=yes initial="0" name=generatebug dbname="TestInfo.GenerateBug" 
+ values="GenBug:	1/GenBug:	0"  )
+column=(type=long update=yes updatewhereclause=yes name=resultmasterid dbname="TestInfo.ResultMasterId"  )
+column=(type=long update=yes updatewhereclause=yes name=assignid dbname="TestInfo.AssignId"  )
+column=(type=char(255) update=yes updatewhereclause=yes name=remark dbname="TestInfo.remark"  )
+column=(type=long update=yes updatewhereclause=yes name=bugid dbname="TestInfo.bugid"  )
+ retrieve="  SELECT TestInfo.TestInfoId,   
+         TestInfo.TestPointId,   
+         TestInfo.ReviewMan,   
+         TestInfo.ReviewTime,     
+         TestInfo.versionid,   
+         TestInfo.infotype,   
+         TestInfo.ReviewState,   
+         TestInfo.Is_Copy,   
+         TestInfo.CategoryId,   
+         TestInfo.RefNumber,   
+         TestInfo.WindowId,   
+         TestInfo.GenerateBug,   
+         TestInfo.ResultMasterId,   
+         TestInfo.AssignId,   
+         TestInfo.remark ,
+         testinfo.bugid 
+    FROM TestInfo  
+   WHERE ( TestInfo.TestPointId = :id )    "
+  update="TestInfo" updatewhere=1 updatekeyinplace=no
+  arguments=(("id", number))
+ sort="reviewtime D"
+)
+button(name=b_update visible="1" band=detail font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" background.mode="2" background.color="67108864" filename="" action="0" vtextalign="0" htextalign="0" x="1262" y="196" height="88" width="247" color="32768" text="&Update"  defaultpicture=no suppresseventprocessing=no )
+button(name=b_new visible="1" band=detail font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" background.mode="2" background.color="67108864" filename="" action="0" vtextalign="0" htextalign="0" x="1262" y="12" height="88" width="247" color="134217856" text="&New"  defaultpicture=no suppresseventprocessing=no )
+column(name=is_copy visible="1" band=detail id=8 x="507" y="728" height="72" width="219" color="0" border="0" alignment="0" format="[general]" edit.name="TF_Format" checkbox.lefttext=yes checkbox.scale=yes checkbox.threed=yes checkbox.text="Copy:" checkbox.on="T" checkbox.off="F" criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="2" background.color="67108864" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=0 )
+button(name=b_search visible="1" band=detail font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" background.mode="2" background.color="67108864" filename="" action="0" vtextalign="0" htextalign="0" x="1262" y="104" height="88" width="247" color="134217858" text="&Search"  defaultpicture=no suppresseventprocessing=no )
+text(name=bugid_t visible="1" band=detail font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" background.mode="1" background.color="536870912" color="33554432" alignment="0" border="0" x="539" y="216" height="60" width="183" text="BugId:" )
+column(name=categoryid visible="1" band=detail id=9 x="558" y="28" height="72" width="347" color="33554432" border="5" alignment="0" format="[general]" dddw.allowedit=no dddw.autohscroll=no dddw.autoretrieve=yes dddw.useasborder=no dddw.datacolumn=categoryid dddw.displaycolumn=label dddw.hscrollbar=no dddw.hsplitscroll=no dddw.imemode=0 dddw.limit=0 dddw.name=dddw_category_all dddw.nilisnull=no dddw.percentwidth=0 dddw.required=no dddw.showlist=no dddw.vscrollbar=no criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="2" background.color="134217739" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=0 )
+column(name=generatebug visible="1" band=detail id=12 x="558" y="120" height="72" width="347" color="33554432" border="0" alignment="0" format="[general]" protect="0	if(isRowNew(), 0, 1)" checkbox.lefttext=yes checkbox.scale=no checkbox.threed=yes checkbox.text="GenBug:" checkbox.on="1" checkbox.off="0" criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="1" background.color="553648127" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=10 )
+column(name=remark visible="1" band=detail id=15 x="27" y="308" height="288" width="1490" color="33554432" border="5" alignment="0" format="[general]" edit.focusrectangle=no edit.autohscroll=no edit.autoselect=yes edit.autovscroll=no edit.case=any edit.codetable=no edit.displayonly=no edit.hscrollbar=no edit.imemode=0 edit.limit=4099 edit.password=no edit.vscrollbar=yes edit.validatecode=no edit.nilisnull=no edit.required=no criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="2" background.color="16777215" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=40 )
+column(name=reviewman visible="1" band=detail id=3 x="27" y="120" height="72" width="498" color="33554432" border="5" alignment="0" format="[general]" edit.name="dddw_person_new" dddw.allowedit=no dddw.autohscroll=no dddw.autoretrieve=yes dddw.useasborder=no dddw.datacolumn=personid dddw.displaycolumn=ename dddw.hscrollbar=no dddw.hsplitscroll=no dddw.imemode=0 dddw.limit=0 dddw.name=d_dddw_person_new dddw.nilisnull=no dddw.percentwidth=100 dddw.lines=8 dddw.required=no dddw.showlist=no dddw.vscrollbar=yes criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="2" background.color="134217739" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=0 )
+column(name=versionid visible="1" band=detail id=5 x="27" y="28" height="72" width="498" color="33554432" border="5" alignment="0" format="[general]" dddw.allowedit=no dddw.autohscroll=no dddw.autoretrieve=yes dddw.useasborder=no dddw.datacolumn=versionid dddw.displaycolumn=versionno dddw.hscrollbar=no dddw.hsplitscroll=no dddw.imemode=0 dddw.limit=0 dddw.name=d_dddw_littleersion dddw.nilisnull=no dddw.percentwidth=0 dddw.required=no dddw.showlist=no dddw.vscrollbar=no criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="2" background.color="134217739" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=0 )
+button(name=b_copy visible="1" band=detail font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" background.mode="2" background.color="67108864" filename="" action="0" vtextalign="0" htextalign="0" x="1024" y="104" height="88" width="96" color="8388608" text="&C"  defaultpicture=no suppresseventprocessing=no )
+button(name=b_modify visible="1" band=detail font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" background.mode="2" background.color="67108864" filename="" action="0" vtextalign="0" htextalign="0" x="1138" y="12" height="88" width="96" color="8388608" text="&M"  defaultpicture=no suppresseventprocessing=no )
+button(name=b_paste visible="1" band=detail font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" background.mode="2" background.color="67108864" filename="" action="0" vtextalign="0" htextalign="0" x="1138" y="104" height="88" width="96" color="8388608" text="&P"  defaultpicture=no suppresseventprocessing=no )
+column(name=infotype visible="1" band=detail id=6 x="27" y="212" height="72" width="498" color="33554432" border="5" alignment="0" format="[general]" edit.name="testinfo_infotype" dddw.allowedit=no dddw.autohscroll=no dddw.autoretrieve=yes dddw.useasborder=no dddw.datacolumn=valuedata dddw.displaycolumn=displaydata dddw.hscrollbar=no dddw.hsplitscroll=no dddw.imemode=0 dddw.limit=0 dddw.name=d_dddw_testinfotype dddw.nilisnull=yes dddw.percentwidth=100 dddw.required=no dddw.showlist=no dddw.vscrollbar=yes criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="2" background.color="16777215" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=20 )
+column(name=bugid visible="1" band=detail id=16 x="741" y="212" height="72" width="283" color="33554432" border="5" alignment="0" format="[general]" edit.focusrectangle=no edit.autohscroll=no edit.autoselect=no edit.autovscroll=no edit.case=any edit.codetable=no edit.displayonly=no edit.hscrollbar=no edit.imemode=0 edit.limit=0 edit.password=no edit.vscrollbar=no edit.validatecode=no edit.nilisnull=yes edit.required=no criteria.required=no criteria.override_edit=no crosstab.repeat=no background.mode="2" background.color="16777215" font.charset="134" font.face="ËÎÌå" font.family="0" font.height="-10" font.pitch="2" font.weight="400" tabsequence=30 )
+htmltable(border="1" )
+htmlgen(clientComputedFields="1" clientEvents="1" clientFormatting="0" clientScriptable="0" clientValidation="1" generateJavaScript="1" netscapelayers="0" )

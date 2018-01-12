@@ -1,0 +1,19 @@
+Save Format v3.0(19990112)
+@begin Libraries
+ "Events\\tc_richtextedit_events.pbl" "";
+@end;
+@begin Objects
+ "Events\\w_pop_viewscript.srw" "Events\\tc_richtextedit_events.pbl";
+ "Events\\n_cst_config.sru" "Events\\tc_richtextedit_events.pbl";
+ "Events\\nvo_transaction.sru" "Events\\tc_richtextedit_events.pbl";
+ "Events\\d_testinfo.srd" "Events\\tc_richtextedit_events.pbl";
+ "Events\\m_templet.srm" "Events\\tc_richtextedit_events.pbl";
+ "Events\\w_templet.srw" "Events\\tc_richtextedit_events.pbl";
+ "Events\\m_simplecasemain.srm" "Events\\tc_richtextedit_events.pbl";
+ "Events\\w_simplecasemain.srw" "Events\\tc_richtextedit_events.pbl";
+ "Events\\w_rteevtw01.srw" "Events\\tc_richtextedit_events.pbl";
+ "Events\\nvo_runwindow_parameter.sru" "Events\\tc_richtextedit_events.pbl";
+ "Events\\uo_multilineedit.sru" "Events\\tc_richtextedit_events.pbl";
+ "Events\\d_testpoint_templet.srd" "Events\\tc_richtextedit_events.pbl";
+ "Events\\tc_richtextedit_events.sra" "Events\\tc_richtextedit_events.pbl";
+@end;

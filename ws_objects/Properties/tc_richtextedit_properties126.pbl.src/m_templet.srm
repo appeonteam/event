@@ -1,0 +1,211 @@
+﻿$PBExportHeader$m_templet.srm
+forward
+global type m_templet from menu
+end type
+type m_init from menu within m_templet
+end type
+type m_- from menu within m_templet
+end type
+type m_newbug from menu within m_templet
+end type
+type m_showbug from menu within m_templet
+end type
+type m_-0 from menu within m_templet
+end type
+type m_viewscript from menu within m_templet
+end type
+type m_-1 from menu within m_templet
+end type
+type m_allpass from menu within m_templet
+end type
+type m_allfailed from menu within m_templet
+end type
+global type m_templet from menu
+m_init m_init
+m_- m_-
+m_newbug m_newbug
+m_showbug m_showbug
+m_-0 m_-0
+m_viewscript m_viewscript
+m_-1 m_-1
+m_allpass m_allpass
+m_allfailed m_allfailed
+end type
+end forward
+
+global type m_templet from menu
+m_init m_init
+m_- m_-
+m_newbug m_newbug
+m_showbug m_showbug
+m_-0 m_-0
+m_viewscript m_viewscript
+m_-1 m_-1
+m_allpass m_allpass
+m_allfailed m_allfailed
+end type
+global m_templet m_templet
+
+on m_templet.create
+m_templet=this
+call super::create
+this.text = "m_templet"
+this.m_init=create m_init
+this.m_-=create m_-
+this.m_newbug=create m_newbug
+this.m_showbug=create m_showbug
+this.m_-0=create m_-0
+this.m_viewscript=create m_viewscript
+this.m_-1=create m_-1
+this.m_allpass=create m_allpass
+this.m_allfailed=create m_allfailed
+this.Item[UpperBound(this.Item)+1]=this.m_init
+this.Item[UpperBound(this.Item)+1]=this.m_-
+this.Item[UpperBound(this.Item)+1]=this.m_newbug
+this.Item[UpperBound(this.Item)+1]=this.m_showbug
+this.Item[UpperBound(this.Item)+1]=this.m_-0
+this.Item[UpperBound(this.Item)+1]=this.m_viewscript
+this.Item[UpperBound(this.Item)+1]=this.m_-1
+this.Item[UpperBound(this.Item)+1]=this.m_allpass
+this.Item[UpperBound(this.Item)+1]=this.m_allfailed
+end on
+
+on m_templet.destroy
+call super::destroy
+destroy(this.m_init)
+destroy(this.m_-)
+destroy(this.m_newbug)
+destroy(this.m_showbug)
+destroy(this.m_-0)
+destroy(this.m_viewscript)
+destroy(this.m_-1)
+destroy(this.m_allpass)
+destroy(this.m_allfailed)
+end on
+
+type m_init from menu within m_templet
+end type
+
+on m_init.create
+call super::create
+this.text = "Init"
+end on
+
+on m_init.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.triggerevent("ue_init")
+end event
+
+type m_- from menu within m_templet
+end type
+
+on m_-.create
+call super::create
+this.text = "-"
+end on
+
+on m_-.destroy
+call super::destroy
+end on
+
+type m_newbug from menu within m_templet
+end type
+
+on m_newbug.create
+call super::create
+this.text = "New Bug"
+end on
+
+on m_newbug.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.triggerevent("ue_newbug")
+end event
+
+type m_showbug from menu within m_templet
+end type
+
+on m_showbug.create
+call super::create
+this.text = "ShowBug"
+end on
+
+on m_showbug.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.triggerevent("ue_showbug")
+end event
+
+type m_-0 from menu within m_templet
+end type
+
+on m_-0.create
+call super::create
+this.text = "-"
+end on
+
+on m_-0.destroy
+call super::destroy
+end on
+
+type m_viewscript from menu within m_templet
+end type
+
+on m_viewscript.create
+call super::create
+this.text = "ViewScript"
+end on
+
+on m_viewscript.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.triggerevent("ue_viewscript")
+end event
+
+type m_-1 from menu within m_templet
+end type
+
+on m_-1.create
+call super::create
+this.text = "-"
+end on
+
+on m_-1.destroy
+call super::destroy
+end on
+
+type m_allpass from menu within m_templet
+end type
+
+on m_allpass.create
+call super::create
+this.text = "All Pass"
+end on
+
+on m_allpass.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.dynamic event ue_setall(true)
+end event
+
+type m_allfailed from menu within m_templet
+end type
+
+on m_allfailed.create
+call super::create
+this.text = "All Failed"
+end on
+
+on m_allfailed.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.dynamic event ue_setall(false)
+end event
+

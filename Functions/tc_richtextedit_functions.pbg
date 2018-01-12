@@ -1,0 +1,42 @@
+Save Format v3.0(19990112)
+@begin Libraries
+ "Functions\\tc_richtextedit_functions.pbl" "";
+@end;
+@begin Objects
+ "Functions\\n_cst_config.sru" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\m_templet.srm" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_templet.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\d_testinfo.srd" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw01.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw10.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\m_simplecasemain.srm" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw02.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw11.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw20.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_simplecasemain.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw03.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw12.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw21.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw04.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw13.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw05.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw14.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw06.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw15.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw07.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw16.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw08.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw17.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw09.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw18.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_rtefunw19.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\rtefunw11_d01_temp01.srd" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\rtefunw12_d01_temp01.srd" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\rtefunw04_d01_temp01.srd" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\uo_multilineedit.sru" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\nvo_runwindow_parameter.sru" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\nvo_transaction.sru" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\tc_richtextedit_functions.sra" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\w_pop_viewscript.srw" "Functions\\tc_richtextedit_functions.pbl";
+ "Functions\\d_testpoint_templet.srd" "Functions\\tc_richtextedit_functions.pbl";
+@end;

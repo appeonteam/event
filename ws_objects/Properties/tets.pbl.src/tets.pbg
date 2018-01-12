@@ -1,0 +1,7 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "tets.pbl" "";
+@end;
+@begin Objects 
+ "w_1.srw" "tets.pbl";
+@end;

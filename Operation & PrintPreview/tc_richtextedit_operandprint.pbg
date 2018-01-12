@@ -1,0 +1,23 @@
+Save Format v3.0(19990112)
+@begin Libraries
+ "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl" "";
+@end;
+@begin Objects
+ "Operation & PrintPreview\\nvo_runwindow_parameter.sru" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\d_testinfo.srd" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\m_templet.srm" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\d_testpoint_templet.srd" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\m_simplecasemain.srm" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\w_templet.srw" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\n_cst_config.sru" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\nvo_transaction.sru" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\w_rteotherw01.srw" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\w_rteotherw02.srw" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\w_rteotherw03.srw" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\w_pop_viewscript.srw" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\w_simplecasemain.srw" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\tc_richtextedit_operandprint.sra" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\uo_multilineedit.sru" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\rteotherw03_uo_p1.sru" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+ "Operation & PrintPreview\\rteotherw03_uo_p2.sru" "Operation & PrintPreview\\tc_richtextedit_operandprint.pbl";
+@end;

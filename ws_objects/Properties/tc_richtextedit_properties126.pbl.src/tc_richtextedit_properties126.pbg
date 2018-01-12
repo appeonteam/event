@@ -1,0 +1,22 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "tc_richtextedit_properties126.pbl" "";
+@end;
+@begin Objects 
+ "tc_richtextedit_properties.sra" "tc_richtextedit_properties126.pbl";
+ "d_testinfo.srd" "tc_richtextedit_properties126.pbl";
+ "d_testpoint_templet.srd" "tc_richtextedit_properties126.pbl";
+ "m_simplecasemain.srm" "tc_richtextedit_properties126.pbl";
+ "m_templet.srm" "tc_richtextedit_properties126.pbl";
+ "n_cst_config.sru" "tc_richtextedit_properties126.pbl";
+ "nvo_runwindow_parameter.sru" "tc_richtextedit_properties126.pbl";
+ "nvo_transaction.sru" "tc_richtextedit_properties126.pbl";
+ "uo_multilineedit.sru" "tc_richtextedit_properties126.pbl";
+ "w_pop_viewscript.srw" "tc_richtextedit_properties126.pbl";
+ "w_rteprow08.srw" "tc_richtextedit_properties126.pbl";
+ "w_rteprow08_ole.srw" "tc_richtextedit_properties126.pbl";
+ "w_rteprow09.srw" "tc_richtextedit_properties126.pbl";
+ "w_rteprow09_ole.srw" "tc_richtextedit_properties126.pbl";
+ "w_simplecasemain.srw" "tc_richtextedit_properties126.pbl";
+ "w_templet.srw" "tc_richtextedit_properties126.pbl";
+@end;

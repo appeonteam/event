@@ -1,0 +1,78 @@
+﻿$PBExportHeader$d_testpoint_templet.srd
+release 8;
+datawindow(units=0 timer_interval=0 color=1073741824 processing=1 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no grid.lines=0 selected.mouse=no )
+header(height=80 color="536870912" )
+summary(height=544 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=80 color="536870912"  height.autosize=yes)
+table(column=(type=long updatewhereclause=yes key=yes identity=yes name=testpointid dbname="TestPoint.TestPointId" )
+ column=(type=char(16) updatewhereclause=yes name=tpno dbname="TestPoint.TPNO" )
+ column=(type=char(100) updatewhereclause=yes name=cndesc dbname="TestPoint.CnDesc" )
+ column=(type=char(100) updatewhereclause=yes name=endesc dbname="TestPoint.EnDesc" )
+ column=(type=long updatewhereclause=yes name=windowid dbname="TestPoint.Windowid" )
+ column=(type=char(8) updatewhereclause=yes name=support dbname="TestPoint.support" initial="1" values="	1/	0" )
+ column=(type=char(4099) update=yes updatewhereclause=no name=expectdesc dbname="TestPoint.Expectdesc" )
+ column=(type=char(4099) update=yes updatewhereclause=no name=teststep dbname="TestPoint.teststep" )
+ column=(type=char(4099) update=yes updatewhereclause=no name=expectvalue dbname="TestPoint.ExpectValue" )
+ column=(type=char(50) updatewhereclause=yes name=querykey dbname="TestPoint.QueryKey" )
+ column=(type=char(1) updatewhereclause=yes name=testlevel dbname="TestPoint.TestLevel" )
+ column=(type=char(4099) updatewhereclause=no name=remark dbname="TestPoint.Remark" )
+ column=(type=long updatewhereclause=yes name=runtimes dbname="TestPoint.runtimes" )
+ column=(type=char(255) updatewhereclause=yes name=truevalue dbname="truevalue" )
+ column=(type=char(255) updatewhereclause=yes name=phenomena dbname="Phenomena" )
+ column=(type=char(1) updatewhereclause=yes name=is_run dbname="is_run" initial="0" values="Yes	1/No	0/" )
+ column=(type=char(1) updatewhereclause=yes name=status dbname="status" values="Failed	0/Passed	1/N//A	2/Not Run	3/Not Completed	4/" )
+ column=(type=char(14) updatewhereclause=yes name=pstatus dbname="Pstatus" )
+ column=(type=long updatewhereclause=yes name=haveinfo dbname="haveinfo" )
+ column=(type=long updatewhereclause=yes name=havebug dbname="havebug" )
+ retrieve="  SELECT TestPoint.TestPointId,   
+         TestPoint.TPNO,   
+         TestPoint.CnDesc,   
+         TestPoint.EnDesc,   
+         TestPoint.Windowid,   
+         testpoint.support,     
+			TestPoint.Expectdesc, 
+			TestPoint.teststep,  
+         TestPoint.ExpectValue,   
+         TestPoint.QueryKey,    
+         TestPoint.TestLevel,    
+         TestPoint.Remark  ,
+			TestPoint.runtimes,
+			truevalue = space(4099),
+			Phenomena = space(4099),
+			is_run = space(1),
+			status = '3',
+			Pstatus = '.\res\arr2.jpg',
+        haveinfo = (select count(testpointid) from testinfo where testinfo.testpointid = testpoint.testpointid),
+		  havebug  = (select count(testpointid) from bugrecord where bugrecord.testpointid = testpoint.testpointid)				 					 
+    FROM TestPoint     
+" update="TestPoint" updatewhere=1 updatekeyinplace=no  sort="tpno A " )
+text(band=header alignment="2" text="Test Point" border="6" color="33554432" x="201" y="4" height="68" width="521" html.valueishtml="0"  name=tpno_t visible="1"  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="134217739" )
+text(band=header alignment="2" text="Describe" border="6" color="33554432" x="731" y="4" height="68" width="1495" html.valueishtml="0"  name=cndesc_t visible="1"  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="134217739" )
+text(band=header alignment="0" text="" border="6" color="33554432" x="2235" y="4" height="68" width="78" html.valueishtml="0"  name=pstatus_t visible="1"  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="134217739" )
+text(band=header alignment="2" text="Status" border="6" color="33554432" x="2322" y="4" height="68" width="425" html.valueishtml="0"  name=status_t visible="1"  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="134217739" )
+text(band=header alignment="2" text="I" border="6" color="33554432" x="9" y="4" height="68" width="87" html.valueishtml="0"  name=haveinfo_t visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="700"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="134217739" )
+text(band=header alignment="2" text="B" border="6" color="33554432" x="105" y="4" height="68" width="87" html.valueishtml="0"  name=havebug_t visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="700"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="134217739" )
+column(band=detail id=18 alignment="0" tabsequence=32766 border="0" color="33554432" x="2235" y="4" height="68" width="78" format="[general]" html.valueishtml="0"  name=pstatus visible="1" height.autosize=yes bitmapname=yes edit.limit=0 edit.case=any edit.autoselect=yes edit.imemode=0  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="1" background.color="536870912" )
+column(band=detail id=17 alignment="0" tabsequence=30 border="0" color="0~tif ( status = '0', rgb(255,0, 0), rgb(0,0,0))" x="2322" y="4" height="68" width="425" format="[general]" html.valueishtml="0"  name=status visible="1" height.autosize=yes edit.name="Is_Success" ddlb.limit=0 ddlb.allowedit=no ddlb.case=any ddlb.nilisnull=yes ddlb.imemode=0  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="1" background.color="536870912" )
+column(band=detail id=3 alignment="0" tabsequence=20 border="0" color="33554432" x="731" y="4" height="68" width="1495" format="[general]" html.valueishtml="0"  name=cndesc visible="1" height.autosize=yes edit.limit=0 edit.case=any edit.autoselect=yes edit.imemode=0 edit.displayonly=yes  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=detail alignment="0" expression="if ( status  = '0', 1, 0)"border="0" color="33554432" x="2757" y="12" height="60" width="251" format="[GENERAL]" html.valueishtml="0"  name=c_failed visible="0"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824"  height.autosize=yes)
+compute(band=detail alignment="0" expression="if( status = '1', 1, 0)"border="0" color="33554432" x="3017" y="20" height="60" width="251" format="[GENERAL]" html.valueishtml="0"  name=c_passed visible="0"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824"  height.autosize=yes)
+compute(band=detail alignment="0" expression="if ( status = '2' , 1, 0)"border="0" color="33554432" x="3278" y="20" height="60" width="251" format="[GENERAL]" html.valueishtml="0"  name=c_na visible="0"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824"  height.autosize=yes)
+compute(band=detail alignment="0" expression="if(status = '3' , 1, 0)"border="0" color="33554432" x="3538" y="24" height="60" width="251" format="[GENERAL]" html.valueishtml="0"  name=c_notrun visible="0"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824"  height.autosize=yes)
+compute(band=detail alignment="0" expression="if(status = '4' , 1, 0)"border="0" color="33554432" x="3799" y="16" height="60" width="251" format="[GENERAL]" html.valueishtml="0"  name=c_notcompleted visible="0"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824"  height.autosize=yes)
+column(band=detail id=2 alignment="0" tabsequence=10 border="0" color="33554432~tif (is_success = '0', rgb(255, 0,0), if(is_run = '1' , rgb(0, 0, 255), rgb(0,0,0)))" x="201" y="4" height="68" width="521" format="[general]" html.valueishtml="0"  name=tpno  tag="²âÊÔµã±àºÅ" visible="1" height.autosize=yes edit.limit=16 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes edit.imemode=0 edit.displayonly=yes  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="1" background.color="536870912" )
+column(band=detail id=20 alignment="2" tabsequence=32766 border="6" color="33554432~tif ( havebug > 0, rgb(128,0,0), rgb(0,0,0))" x="105" y="4" height="68" width="87" format="[general]" html.valueishtml="0"  name=havebug visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="67108864" )
+column(band=detail id=19 alignment="2" tabsequence=32766 border="6" color="33554432~tif ( havebug > 0, rgb(0,0,255), rgb(0,0,0))" x="9" y="4" height="68" width="87" format="[general]" html.valueishtml="0"  name=haveinfo visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="67108864" )
+compute(band=summary alignment="0" expression="sum(c_passed )"border="0" color="33554432" x="2322" y="20" height="60" width="425" format="[GENERAL]" html.valueishtml="0"  name=compute_1 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="0" expression="sum( c_notrun )"border="0" color="33554432" x="2322" y="124" height="60" width="425" format="[GENERAL]" html.valueishtml="0"  name=compute_2 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="0" expression="sum( c_notcompleted )"border="0" color="33554432" x="2322" y="228" height="60" width="425" format="[GENERAL]" html.valueishtml="0"  name=compute_3 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="0" expression="sum( c_na)"border="0" color="33554432" x="2322" y="444" height="60" width="425" format="[GENERAL]" html.valueishtml="0"  name=compute_5 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=summary alignment="1" text="Passed" border="0" color="33554432" x="731" y="20" height="60" width="1495" html.valueishtml="0"  name=t_1 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=summary alignment="1" text="NotRun" border="0" color="33554432" x="731" y="124" height="60" width="1495" html.valueishtml="0"  name=t_2 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=summary alignment="1" text="NotComplete" border="0" color="33554432" x="731" y="228" height="60" width="1495" html.valueishtml="0"  name=t_3 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=summary alignment="1" text="N/A" border="0" color="33554432" x="731" y="444" height="60" width="1495" html.valueishtml="0"  name=t_5 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=summary alignment="1" text="Failed" border="0" color="255" x="731" y="336" height="60" width="1495" html.valueishtml="0"  name=t_4 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="0" expression="sum(  c_failed  )"border="0" color="255" x="2322" y="336" height="60" width="425" format="[GENERAL]" html.valueishtml="0"  name=compute_4 visible="1"  font.face="ËÎÌå" font.height="-10" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" netscapelayers="0" )
