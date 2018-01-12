@@ -4,5 +4,6 @@
 @end;
 @begin Objects 
  "test.sra" "test.pbl";
+ "vn.srm" "test.pbl";
  "dsgxv.srw" "test.pbl";
 @end;
