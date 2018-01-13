@@ -3,4 +3,5 @@
  "符号和你.pbl" "";
 @end;
 @begin Objects 
+ "gfjn.srm" "符号和你.pbl";
 @end;

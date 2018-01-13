@@ -6,5 +6,5 @@ Save Format v3.0(19990112)
  3 "properties\\tc_richtextedit_properties.pbt";
  4 "test.pbt";
 @end;
-DefaultTarget "test.pbt";
-DefaultRemoteTarget "test.pbt";
+DefaultTarget "operation & printpreview\\tc_richtextedit_operandprint.pbt";
+DefaultRemoteTarget "operation & printpreview\\tc_richtextedit_operandprint.pbt";

@@ -1,0 +1,41 @@
+﻿$PBExportHeader$gfjn.srm
+forward
+global type gfjn from vn
+end type
+end forward
+
+global type gfjn from vn
+end type
+global gfjn gfjn
+
+on gfjn.create
+gfjn=this
+call super::create
+end on
+
+on gfjn.destroy
+call super::destroy
+end on
+
+type m_gjhgch from vn`m_gjhgch within gfjn
+end type
+
+on m_gjhgch.create
+call super::create
+end on
+
+on m_gjhgch.destroy
+call super::destroy
+end on
+
+type m_1152 from vn`m_1152 within m_gjhgch
+end type
+
+on m_1152.create
+call super::create
+end on
+
+on m_1152.destroy
+call super::destroy
+end on
+
